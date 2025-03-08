@@ -1,0 +1,18 @@
+name: shell commands workflow
+on: [push]
+
+jobs:
+  show-working-directory-windows:
+    runs-on: windows-latest
+    steps:
+      - name: bash
+        shell: bash  # Step Level Default Shell
+        run: uname -a
+      - name: pwshell  # Step Level Default Shell
+        run: Get-Computerinfo
+      - name: Python
+        shell: python  # Step Level Default Shell
+        run: import sys
+      - name: node 
+        shell: node  # Step Level Default Shell
+        run: console.log(process.version)
