@@ -1,0 +1,18 @@
+name: Change Working Dir & Shell
+on: [push]
+jobs:
+  show-working-directory-linux:
+    runs-on: windows-latest
+    steps:
+      - name: 워킹 디렉토리 생성
+        working-directory: /home/runner
+        run: mkdir  test_folder
+      - name: sample text 생성
+        working-directory: /home/runner/test_folder
+        run: |
+          touch sample.txt
+          echo "test" >> sample.txt
+      - name: sample text 생성
+        working-directory: /home/runner/test_folder
+        run: cat sample.txt
+          

@@ -12,7 +12,9 @@ jobs:
         run: Get-Computerinfo
       - name: Python
         shell: python  # Step Level Default Shell
-        run: import sys
+        run: |
+          import sys
+          print(sys.version)
       - name: node 
-        shell: node  # Step Level Default Shell
+        shell: node {0}  # Step Level Default Shell
         run: console.log(process.version)
