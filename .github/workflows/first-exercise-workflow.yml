@@ -1,5 +1,5 @@
 name: first-exercise-workflow
-on: [push]
+on: [pull_request]
 
 jobs:
   testing-wf-commands:
