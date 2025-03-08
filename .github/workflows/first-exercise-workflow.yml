@@ -1,0 +1,11 @@
+name: first-exercise-workflow
+on: [push]
+
+jobs:
+  testing-wf-commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Python Version
+        run: echo python --version
+      - name: Pip Version
+        run: echo pip --version
