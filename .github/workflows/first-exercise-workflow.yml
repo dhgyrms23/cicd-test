@@ -1,11 +1,11 @@
 name: first-exercise-workflow
-on: [pull_request]
+on: [push, pull_request]
 
 jobs:
-  testing-wf-commands:
+  check-Python:
     runs-on: ubuntu-latest
     steps:
-      - name: Python Version
+      - name: 1.Python Version
         run: python --version
-      - name: Pip Version
+      - name: 2.Pip Version
         run: pip --version
