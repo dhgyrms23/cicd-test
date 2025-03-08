@@ -2,11 +2,11 @@ name: Change Working Dir & Shell
 on: [push]
 jobs:
   show-working-directory-linux:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: 워킹 디렉토리 생성
-        working-directory: /home/runner
-        run: mkdir  test_folder
+        working-directory: /home/
+        run: mkdir -p /home/runner/test_folder
       - name: sample text 생성
         working-directory: /home/runner/test_folder
         run: |
